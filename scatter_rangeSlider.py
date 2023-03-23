@@ -62,7 +62,7 @@ def update_graph(year_chosen):
         height=550,
     )
 
-    scatterplot.update_traces(textposition='top center')
+    scatterplot.update_traces(textposition='top center') #텍스트 탬플릿 변경
 
     return (scatterplot)
 
