@@ -131,3 +131,7 @@ dmypy.json
 data/
 
 mapbox_token.txt
+
+image/
+
+.idea/
