@@ -43,8 +43,8 @@ app.layout = html.Div(
 
 @app.callback(
     Output("tooltip-graph", "show"),
-    Output("tooltip-graph", "bbox"),
-    Output("tooltip-graph", "children"),
+    Output("tooltip-graph", "bbox"), #좌표
+    Output("tooltip-graph", "children"), #그래프 모양
     Input("tooltip-graph-basic-2", "hoverData")
 )
 def display_hover(hover_data):
@@ -54,7 +54,7 @@ def display_hover(hover_data):
     print(hover_data)
     x = hover_data["points"][0]["x"]
     
-    date_month = x[:7]
+    date_month = x[:7] #월까지만
     df_filtered = df.query(f"year_month == '{date_month}'")
 
     df_filtered_grouped = (
